@@ -1,0 +1,16 @@
+inherit rubygem
+
+NAME="ruby-clutter-gdk"
+VERSION=3.1.1
+RELEASE=1
+CATEGORY="Ruby"
+SUMMARY="Ruby Clutter GDK backend bindings"
+DESCRIPTION="Ruby/ClutterGDK is a Ruby binding of the GDK specific API of Clutter."
+HOMEPAGE="http://ruby-gnome2.sourceforge.jp/"
+
+ARCH=noarch
+
+PKG_NAMES="${NAME} ${NAME}-doc"
+ruby_clutter_gdk_REQUIRES="girepository-Clutter1.0"
+ruby_clutter_gdk_CONTENTS=${RUBYGEM_INSTDIR#/}" "${RUBYGEM_SPEC#/}
+ruby_clutter_gdk_doc_CONTENTS=${RUBYGEM_DOCDIR#/}
